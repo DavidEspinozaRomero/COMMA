@@ -1,0 +1,24 @@
+{
+  "name": "comma",
+  "version": "1.0.0",
+  "description": "COMMA responsive web page",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DavidEspinozaRomero/COMMA.git"
+  },
+  "keywords": [
+    "responsive",
+    "web",
+    "page"
+  ],
+  "author": "David Espinoza <deerhou@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/DavidEspinozaRomero/COMMA/issues"
+  },
+  "homepage": "https://github.com/DavidEspinozaRomero/COMMA#readme"
+}
