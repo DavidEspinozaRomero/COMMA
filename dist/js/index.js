@@ -6,7 +6,7 @@ const $menuList = document.getElementById('menu__list')
 const menuItems = ['Hamburguesas', 'Bebidas', 'Pasteles']
 
 const $aboutList = document.getElementById('about__list')
-const aboutItems = ['Nosotros', 'Tradicion', 'Galeria de fotos', 'Blog']
+const aboutItems = ['Nosotros', 'Tradicion', 'Blog', 'Galeria de fotos']
 
 // Categorias de productos
 // Bebidas
@@ -24,7 +24,10 @@ const pastelChocolate = {name:'Pastel de chocolate', img:'https://instagram.fatf
 // Todos los productos en 1 Array
 const productos = [hamburguesaSimple, hamburguesaDoble, milshakeSabores,milshakeFrase,pastelChocolateBlanco,pastelChocolate]
 
-const createTemplate = (HTMLString) => {
+// About section
+const about = {img:"/public/item-6.jpg", alt:'image alt',title:"Title", txt:'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eius accusamus, nam dolor hic corrupti, esse suscipit, aliquid magni placeat quia facilis. Necessitatibus, quo deserunt ipsam maxime laboriosam amet officiis animi.'}
+
+const createHTML = (HTMLString) => {
   const html = document.implementation.createHTMLDocument();
   html.body.innerHTML = HTMLString;
   return html.body.children[0];
@@ -38,7 +41,7 @@ const itemTemplate = ($nameList,id) => `<span id='${id}' class="${$nameList}__it
 const renderListItems = (nameList, items, $list) =>{
   for (let i = 0, listItems = items.length; i < listItems; i++) {
     const template = itemTemplate(nameList,items[i]);
-    const item = createTemplate(template);
+    const item = createHTML(template);
     addEventClick(item)
     $list.append(item);
   }
@@ -51,10 +54,21 @@ const productTemplate = (imgSrc, altTxt, productName, productDescription, produc
   return(
     `
     <div class="product">
-    <img class="product__img" src="${imgSrc}" alt="${altTxt}">
+    <img class="product__img" loading='lazy' src="${imgSrc}" alt="${altTxt}">
     <h3 class="product__name">${productName}</h3>
     <p class="product__description">${productDescription}</p>
     <span class="product__price">${productPrice}</span>
+    </div>
+    `
+  )
+}
+const contentTemplate = (imgSrc,altTxt, title, text) => {
+  return(
+    `
+    <div class="content">
+    <img class="content__img" loading='lazy' src="${imgSrc}" alt="${altTxt}">
+    <h3 class="content__title">${title}</h3>
+    <p class="content__text">${text}</p>
     </div>
     `
   )
@@ -85,7 +99,7 @@ function renderType() {
 function showModal(e) {
   (e.target.classList.contains('menu__item'))
     ? renderProduct(findId(e))
-    : renderAbout()
+    : renderAbout(about)
   $modal.classList.remove('hide')
   $modal.style.animation = 'modalIn .8s forwards';
 }
@@ -101,7 +115,15 @@ const renderProduct = (products) =>{
   for (const product of products) {
     const {img, name, description, price} = product;
     const template = productTemplate(img, name, name, description, price);
-    const item = createTemplate(template);
+    const item = createHTML(template);
     $modalContainer.append(item);
   }
+}
+
+const renderAbout = (content) => {
+  $modalContainer.innerHTML="";
+  const {img, alt, title, txt} = content;
+  const template = contentTemplate(img, alt, title, txt);
+  const item = createHTML(template);
+  $modalContainer.append(item);
 }
