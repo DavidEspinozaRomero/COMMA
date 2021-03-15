@@ -11,7 +11,7 @@ const aboutItems = ['Nosotros', 'Tradicion', 'Blog', 'Galeria de fotos']
 // Categorias de productos
 // Bebidas
 const milshakeSabores = {name:'Hamburguesa Simple', img:'https://instagram.fatf1-1.fna.fbcdn.net/v/t51.2885-15/sh0.08/e35/p750x750/146619626_3484631544979230_617797892373189481_n.jpg?tp=1&_nc_ht=instagram.fatf1-1.fna.fbcdn.net&_nc_cat=106&_nc_ohc=KZ0qryTaQ_wAX-sgjwH&oh=f15d091cb58eb36763029f9c094a2150&oe=60748FBE', description: 'tres sabores vainilla, chocolate y fresa', price:'$3.00', id:'Bebidas'}
-const milshakeFrase = {name:' Doble', img:'https://instagram.fatf1-1.fna.fbcdn.net/v/t51.2885-15/sh0.08/e35/p750x750/144888694_1075674346179750_352439025387974684_n.jpg?tp=1&_nc_ht=instagram.fatf1-1.fna.fbcdn.net&_nc_cat=106&_nc_ohc=fva_fssUDUcAX-50f0A&oh=20133b1d79516d1c646f34c4534e4dfa&oe=6073BCF6', description: 'fresas con chocolate blanco', price:'$5.00' , id:'Bebidas'}
+const milkshakeFrase = {name:' Doble', img:'https://instagram.fatf1-1.fna.fbcdn.net/v/t51.2885-15/sh0.08/e35/p750x750/144888694_1075674346179750_352439025387974684_n.jpg?tp=1&_nc_ht=instagram.fatf1-1.fna.fbcdn.net&_nc_cat=106&_nc_ohc=fva_fssUDUcAX-50f0A&oh=20133b1d79516d1c646f34c4534e4dfa&oe=6073BCF6', description: 'fresas con chocolate blanco', price:'$5.00' , id:'Bebidas'}
 
 // Hamburguesas
 const hamburguesaSimple = {name:'Hamburguesa Simple', img:'https://instagram.fatf1-1.fna.fbcdn.net/v/t51.2885-15/sh0.08/e35/p640x640/156225868_824205031497069_6640867329066576039_n.jpg?tp=1&_nc_ht=instagram.fatf1-1.fna.fbcdn.net&_nc_cat=109&_nc_ohc=lgPo-UZAe94AX-8rUuY&oh=e95ce490152aecbb0d3423501bcab251&oe=607464DF', description: 'carne con queso', price:'$3.00', id:'Hamburguesas'}
@@ -22,10 +22,12 @@ const pastelChocolateBlanco = {name:'Pastel de chocolate Blanco', img:'https://i
 const pastelChocolate = {name:'Pastel de chocolate', img:'https://instagram.fatf1-1.fna.fbcdn.net/v/t51.2885-15/sh0.08/e35/p750x750/148116168_176927287536981_5432411285464101204_n.jpg?tp=1&_nc_ht=instagram.fatf1-1.fna.fbcdn.net&_nc_cat=109&_nc_ohc=G9j0ApCY3N4AX_q6pDd&oh=2a8e847e08ed9cdb716956122c89bfda&oe=607255C0', description: 'pastel helado de fresa', price:'$12.00', id:'Pasteles'}
 
 // Todos los productos en 1 Array
-const productos = [hamburguesaSimple, hamburguesaDoble, milshakeSabores,milshakeFrase,pastelChocolateBlanco,pastelChocolate]
+const productos = [hamburguesaSimple, hamburguesaDoble, milshakeSabores,milkshakeFrase,pastelChocolateBlanco,pastelChocolate]
 
 // About section
-const about = {img:"/public/item-6.jpg", alt:'image alt',title:"Title", txt:'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eius accusamus, nam dolor hic corrupti, esse suscipit, aliquid magni placeat quia facilis. Necessitatibus, quo deserunt ipsam maxime laboriosam amet officiis animi.'}
+const about = {img:"/public/item-6.jpg", alt:'image alt',title:"El resultado del gran amor por la comida.", txt:'No solo creamos momentos únicos. Si no lo más importante “amor” y momentos felices. Sin importar la hora del día, Tu familia es lo más importante sin importar edad, gustos o limitaciones y siempre tendremos algo para esos momentos. Un “Buenos días” con un café molido y pancakes, unos waffles y crepes. Al llegar del trabajo para disfrutar con quienes amas un lomo dentro un mini baguette, con tu milkshake o bebida favorita. ¡Gracias! por dejarnos ser parte de esos momentos únicos.'}
+const nosotros = {img:"/public/item-4.jpg", alt:'image alt',title:"En COMMA nos ocupamos de ti", txt:'COMMA desarrollamos productos de calidad, somos una empresa enfocada a velar por los paladares de nuestras familias, las cuales son cada vez más exigentes. Todos disfrutarán cada día de alimentos irresistibles, que están elaborados con los ingredientes más deliciosos y de la más alta calidad además de estar protegidos con aluminio lo cual mantiene su frescura y es como si fuera recién preparado a lado suyo. Los consumidores valoran la gran variedad de combos y combinaciones creadas con cuidado y cariño.'}
+const blog = {img:"/public/item-7.jpg", alt:'image alt',title:"Nuestra pasión", txt:'COMMA desarrollamos productos de calidad, somos una empresa enfocada a velar por los paladares de nuestras familias, las cuales son cada vez más exigentes. Todos disfrutarán cada día de alimentos irresistibles, que están elaborados con los ingredientes más deliciosos y de la más alta calidad además de estar protegidos con aluminio lo cual mantiene su frescura y es como si fuera recién preparado a lado suyo. Los consumidores valoran la gran variedad de combos y combinaciones creadas con cuidado y cariño.'}
 
 const createHTML = (HTMLString) => {
   const html = document.implementation.createHTMLDocument();
