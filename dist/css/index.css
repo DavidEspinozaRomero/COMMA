@@ -10,7 +10,7 @@ html {
 
 body {
   font-family: "Akaya Telivigala", cursive;
-  height: 100vh;
+  min-height: 100vh;
   box-sizing: border-box;
   background-image: url('https://instagram.fatf1-1.fna.fbcdn.net/v/t51.2885-15/sh0.08/e35/p640x640/151277118_184141833051044_1164255945149235967_n.jpg?tp=1&_nc_ht=instagram.fatf1-1.fna.fbcdn.net&_nc_cat=108&_nc_ohc=ZszFKZ9iW00AX87c-A7&oh=bea1dff54c71a023c5686ab30409472a&oe=6073C3F1');
   background-repeat: no-repeat;
@@ -73,6 +73,8 @@ body {
   border-radius: 20px;
   box-shadow: 2px 2px 2px #00000050;
   background-color: #ffffff90;
+  text-decoration: none;
+  color: inherit;
 }
 
 .menu li, .about li {

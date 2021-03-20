@@ -5,8 +5,8 @@ const $btnClose = document.getElementById('btn-close');
 const $menuList = document.getElementById('menu__list')
 const menuItems = ['Hamburguesas', 'Bebidas', 'Pasteles']
 
-const $aboutList = document.getElementById('about__list')
-const aboutItems = ['Nosotros', 'Tradicion', 'Blog', 'Galeria de fotos']
+// const $aboutList = document.getElementById('about__list')
+// const aboutItems = ['Nosotros', 'Tradicion', 'Blog', 'Galeria de fotos']
 
 // Categorias de productos
 // Bebidas
@@ -50,7 +50,7 @@ const renderListItems = (nameList, items, $list) =>{
 }
 
 renderListItems('menu', menuItems, $menuList)
-renderListItems('about', aboutItems, $aboutList)
+// renderListItems('about', aboutItems, $aboutList)
 
 const productTemplate = (imgSrc, altTxt, productName, productDescription, productPrice) => {
   return(
